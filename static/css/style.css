@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Hammersmith+One&display=swap');
+
+
+html,
+body {
+  font-family: 'Hammersmith One', sans-serif;
+  overflow-x: hidden;
+}
+
+
+#logo {
+    width: 300px; /* Ajuste o tamanho conforme necessário */
+    animation: brilho 2s linear infinite alternate;
+}
+
+@keyframes brilho {
+    0% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+.decoration-none{
+    text-decoration: none;
+}
+
+#texto {
+   
+    animation: brilho 5s linear infinite alternate;
+}
+
+
+#ver{
+    text-decoration: none;
+}
+
+
+#scrollToTopBtn {
+    display: none;
+    position: fixed;
+    bottom: 45px;
+    right: 45px;
+    z-index: 99;
+    font-size: 25px;
+    background-color: #f8f9fa;
+    border: none;
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+}
+
+/* Estilos personalizados para o footer */
+.btn-social {
+    margin: 0 5px;
+    font-size: 24px;
+    text-decoration: none;
+}
+
+.btn-social i {
+    transition: color 0.3s;
+}
+
+.btn-social:hover i {
+    color: #007bff; /* Cor azul ao passar o mouse */
+}
+
+
+/* Estilizando a barra de rolagem vertical */
+::-webkit-scrollbar {
+    width: 12px; /* Largura da barra de rolagem vertical */
+}
+
+::-webkit-scrollbar-track {
+    background-color: #f1f1f121; /* Cor de fundo da trilha */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #2144e0; /* Cor da própria barra de rolagem */
+    border-radius: 6px; /* Borda arredondada da barra de rolagem */
+}
+
+/* Estilizando a barra de rolagem horizontal (caso necessário) */
+::-webkit-scrollbar-horizontal {
+    height: 12px; /* Altura da barra de rolagem horizontal */
+}
+
+::-webkit-scrollbar-track-horizontal {
+    background-color: #f1f1f1; /* Cor de fundo da trilha horizontal */
+}
+
+::-webkit-scrollbar-thumb-horizontal {
+    background-color: #888; /* Cor da própria barra de rolagem horizontal */
+    border-radius: 6px; /* Borda arredondada da barra de rolagem horizontal */
+}
+
+
+.project-title {
+    min-height: 60px; /* Ajuste a altura conforme necessário */
+}
+
+.project-button {
+    min-height: 40px; /* Ajuste a altura conforme necessário */
+    margin-top: 10px; /* Ajuste a margem superior conforme necessário */
+}
+
+
+
+/* Estilos para o botão "Voltar para Cima" */
+#btnVoltarParaCima {
+    display: none; /* Ocultar o botão por padrão */
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 99;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+  
+}
+
+#whatsapp-button {
+    position: fixed;
+    bottom: 20px; /* Ajuste a altura conforme necessário */
+    left: 20px; /* Ajuste a distância da esquerda conforme necessário */
+    z-index: 1000; /* Certifique-se de que o botão esteja acima de outros elementos */
+  }
+  
+
+#btnVoltarParaCima:hover {
+    background-color: #0056b3; /* Cor de fundo do botão ao passar o mouse */
+}
+
+
+  
+  #logo:hover {
+    /* Estilo quando o mouse passa por cima */
+    filter: brightness(0.8) saturate(200%) hue-rotate(180deg);
+  }
+  
+/* styles.css */
+/* CSS *//* CSS */
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    opacity: 1; /* Inicialmente, a opacidade é definida como 1 (totalmente visível) */
+    visibility: visible; /* Inicialmente, a visibilidade está definida como visível */
+    transition: opacity 0.5s ease, visibility 0.5s; /* Adicione transições para "opacity" e "visibility" */
+}
+
+.loader.hidden {
+    opacity: 0; /* Quando a classe "hidden" é adicionada, a opacidade é definida como 0 (invisível) */
+    visibility: hidden; /* Quando a classe "hidden" é adicionada, a visibilidade é definida como oculta */
+    pointer-events: none; /* Impede interações com elementos abaixo da tela de loading */
+}
+
+
+.spinner {
+    border: 4px solid rgba(255, 255, 255, 0.3);
+    border-top: 4px solid #3498db;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 2s linear infinite;
+}
+
+.content {
+    display: none; /* Oculta o conteúdo principal por padrão */
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* CSS */
+.cookie-consent {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    z-index: 9999; /* Defina um valor alto de z-index */
+    transform: translateY(100%); /* Inicialmente, a barra está fora da tela */
+    transition: transform 0.3s ease; /* Adiciona uma transição suave */
+}
+
+
+
+.cookie-consent.show {
+    transform: translateY(0); /* Quando a classe "show" é adicionada, a barra desliza para cima */
+}
+#accept-cookies {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 5px 15px;
+    cursor: pointer;
+}
+
+
+#juan-img{
+    border-radius: 15px;
+}
+
+@media (max-width: 767px) {
+    #rocket {
+        display: none;
+    }
+}
+
+@media (max-width: 767px) {
+    #rocket2 {
+        display: none;
+    }
+}
+
+
+.elemento {
+    width: 50px;
+    height: 50px;
+    
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: moverDiagonal 5s linear forwards;
+}
+
+@keyframes moverDiagonal {
+    to {
+        top: 0;
+        left: calc(100% - 50px);
+    }
+}

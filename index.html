@@ -1,0 +1,520 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Devsync</title>
+
+  <!--Link de Donwload do Bootstrap-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  <link href="https://fonts.googleapis.com/css2?family=Hammersmith+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/css/style.css">
+
+  <!--Link Favicon-->
+  <link rel="shortcut icon" href="/static/img/favicon.ico" type="image/x-icon">
+  <script>
+
+    document.addEventListener('keydown', function (event) {
+      // Verifica se a combinação de teclas Ctrl + U é pressionada (Ctrl + U tem o código 85 no evento 'keydown')
+      if (event.ctrlKey && event.keyCode === 85) {
+        event.preventDefault(); // Impede o comportamento padrão (abrir a visualização do código-fonte)
+        alert("A visualização do código-fonte está desativada.");
+      }
+    });
+
+    const texto = "Somos a Devsync.";
+    const delay = 100; // Delay entre cada caractere (em milissegundos)
+
+    let index = 0;
+    function typeWriter() {
+      if (index < texto.length) {
+        document.getElementById('texto-animado').innerHTML += texto.charAt(index);
+        index++;
+        setTimeout(typeWriter, delay);
+      }
+    }
+
+    // Iniciar a animação após o carregamento da página
+    window.onload = function () {
+      typeWriter();
+    };
+  </script>
+</head>
+
+<body class="bg-black">
+
+
+  <!--Tela de Carregamento-->
+  <div class="loader">
+    <div class="spinner"></div>
+  </div>
+
+  <!--Alerta de Cookies-->
+  <div id="cookie-consent" class="cookie-consent">
+    <p>Este site utiliza cookies para melhorar a sua experiência. Ao continuar a navegar, você concorda com o uso de
+      cookies.</p>
+    <button id="accept-cookies" class="btn btn-outline-primary">Aceitar</button>
+  </div>
+
+
+  <!--Navbar-->
+  <main class="container p-5">
+    <div class="container">
+      <nav class="navbar navbar-dark navbar-expand-lg p-2">
+        <div class="container-fluid">
+
+          <a class="navbar-brand" href="#"> <strong class="text-primary">Devsync.</strong> </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#servicos">Serviços</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#quemsomos">Sobre Nós</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="#">Portifólio</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                  aria-expanded="false">
+                  Saiba Mais
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="equipe.html">Equipe</a></li>
+                  <li><a class="dropdown-item" href="privacidade.html">politica de privacidade</a></li>
+                  <li>
+                    <hr class="dropdown-divider">
+                  </li>
+                  <li><a class="dropdown-item text-danger" href="https://www.instagram.com/devsync.tech/">Sair</a></li>
+                </ul>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <a href="" class="btn btn-outline-primary">Contatar</a>
+            </form>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <!--Seção de Home-->
+    <section id="home" class="container my-4 p-1">
+      <div class="row">
+        <div class="col-12 col-lg-6 pt-5">
+          <br>
+          <div id="texto-animado" class="text-primary" style="font-size: 60px;"></div>
+          <span class="cursor"></span>
+          <p class="text-white lead text-center text-md-start">Transformando ideias em realidade digital com a sincronia
+            perfeita do desenvolvimento de sites.</p>
+          <div class="mt-5 ">
+
+            <button class="btn btn-outline-primary p-1 text-md-start">
+              <a class="text-primary decoration-none " href="#planos">Ver Planos</a><i
+                class="bi bi-search p-1"></i></button>
+
+            <button class="btn btn-outline-primary p-1 text-center">Fale Conosco <i
+                class="bi bi-telephone-forward p-1"></i></button>
+
+          </div>
+        </div>
+        <div id="rocket" class="elemento">
+          <img src="/static/img/rocket.png" alt="" srcset="">
+        </div>
+        <div class="col-12 col-lg-6">
+          <img id="rocket" src="/static/img/hand-coding-animate (1).svg" width="400px" height="400px" class="p-5" alt=""
+            srcset="">
+        </div>
+
+      </div>
+    </section>
+    </div>
+  </main>
+
+  <!--Seção de Serviços-->
+  <section id="servicos" class="container my-4 text-white p-5 pt-5">
+    <div class="container">
+      <h1 class="p-3">Serviços / <i class="bi bi-briefcase-fill"></i></h1>
+
+      <div class="row">
+        <div class="card border-primary  bg-black text-white " style="width: 20rem;">
+
+          <div class="card-body text-center">
+            <i class="bi bi-bar-chart-line text-primary" style="font-size: 3rem;"></i>
+            <h5 class="card-title">Expertise Técnica e Criativa nos Sites</h5>
+            <br>
+            <p class="card-text">Na DevSync, nossa equipe é formada por especialistas que combinam uma sólida expertise
+              técnica com uma abordagem criativa e inovadora.</p>
+
+          </div>
+        </div>
+
+
+        <div class="card border-primary bg-black text-white " style="width: 20rem;">
+
+          <div class="card-body text-center ">
+            <i class="bi bi-person-check-fill text-primary" style="font-size: 3rem;"></i>
+            <h5 class="card-title">Satisfação do Cliente em Primeiro Lugar</h5>
+            <br>
+            <p class="card-text">A satisfação do cliente é o nosso princípio orientador. Trabalhamos incansavelmente
+              para entender as necessidades de nossos clientes.
+            </p>
+
+          </div>
+        </div>
+
+        <div class="card bg-black border-primary text-white " style="width: 20rem;">
+
+          <div class="card-body text-center">
+            <i class="bi bi-award text-primary" style="font-size: 3rem;"></i>
+            <h5 class="card-title">Excelência em Design e Desenvolvimento</h5>
+            <br>
+            <p class="card-text">Nosso compromisso com a excelência permeia tudo o que fazemos. Nossos designers e
+              desenvolvedores estão em constante busca pela perfeição. </p>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!--Seção de Quem Somos-->
+  <section id="quemsomos" class="container my-4 p-5" style=" box-shadow: 10px 20px 7px rgba(0, 0, 0, 0.2);">
+    <h1 class="text-white p-3">Sobre Nós / <i class="bi bi-question-diamond-fill"></i></h1>
+
+    <div class="card mb-3 text-center border-primary bg-black">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img src="/static/img/dev.svg" class="rounded-end" alt="...">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <br><br>
+            <p class="card-text p-4 text-white">Nós somos uma equipe apaixonada e altamente sincronizada de <strong
+                class="text-primary">
+                Desenvolvedores Web</strong> especializados em <strong class="text-primary">
+                Ruby, PHP, SQL, HTML, CSS e JavaScript.</strong>
+            </p>
+            <p class="text-white"> Com uma profunda expertise e comprometimento com a
+              excelência, nossa missão é criar websites e aplicações online que atendam às necessidades e expectativas
+              dos nossos clientes. </p>
+
+            <p class="text-white"> Estamos constantemente atualizados com as últimas tendências tecnológicas para
+              oferecer soluções inovadoras e eficazes. </p>
+            <p class="text-white"> Seja qual for o seu projeto online, estamos aqui para
+              transformar suas ideias em realidade digital de forma excepcional.</p>
+            <button class="btn btn-outline-primary btn-lg p-2"> <a id="ver" href="equipe.html">Ver Equipe</a> </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--Botão de Voltar ao Topo-->
+  <button class="bg-black" id="scrollToTopBtn" title="Voltar para o Topo"><i class="bi bi-arrow-up-circle text-primary"
+      style="font-size: 3rem;"></i></button>
+
+  <a href="https://api.whatsapp.com/send?phone=5513988342378&text=Ol%C3%A1!%20Vim%20do%20site%20da%20equipe%20DevSync."
+    target="_blank" id="whatsapp-button">
+    <i class="bi bi-whatsapp" style="font-size: 3rem;"></i>
+  </a>
+
+  <br><br>
+
+  <!--Seção de portifólio-->
+  <section id="portifolio" class=" container p-5">
+
+    <div class="container p-5">
+      <div class="row">
+        <h1 class="text-white p-3">Portifólio / <i class="bi bi-copy"></i></h1>
+        <div class="card bg-black border-primary" style="width: 18rem;">
+          <img width="150px" height="150px" src="/static/img/atlas.png" class="card-img-top img-fluid" alt="...">
+          <div class="card-body">
+            <h5 class="card-title text-primary">Atlas</h5>
+
+
+          </div>
+        </div>
+
+        <div class="card bg-black border-primary" style="width: 18rem;">
+          <img width="150px" height="150px" src="/static/img/desconectados.png" class="card-img-top img-fluid"
+            alt="...">
+          <div class="card-body">
+            <h5 class="card-title text-primary">Desconectados</h5>
+
+
+
+          </div>
+        </div>
+
+        <div class="card bg-black border-primary" style="width: 18rem;">
+          <img src="/static/img/institutoamar.png" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title text-primary">Instituto Amar</h5>
+
+
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="card bg-black border-primary" style="width: 18rem;">
+          <img src="/static/img/prosp.png" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title text-primary">Prosp+</h5>
+
+
+          </div>
+        </div>
+
+        <div class="card bg-black border-primary" style="width: 18rem;">
+          <img src="/static/img/tiz.png" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title text-primary">TIZ</h5>
+
+
+          </div>
+        </div>
+
+        <div class="card bg-black border-primary" style="width: 18rem;">
+          <img src="/static/img/webino.png" class="card-img-top img-fluid" alt="...">
+          <div class="card-body">
+            <h5 class="card-title text-primary">Webino</h5>
+
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+
+  <!--Seção de Quem Somos-->
+  <section id="site" class="container my-4 p-5" style=" box-shadow: 10px 20px 7px rgba(0, 0, 0, 0.2);">
+    <h1 class="text-white p-1">Por que ter um site / <i class="bi bi-info-circle-fill"></i></h1>
+
+    <div class="card mb-3 text-center border-primary bg-black">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img src="/static/img/questions-animate.svg" class="rounded-end" alt="...">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <br><br>
+            <p class="text-light"> Ter um site pessoal é mais do que uma presença digital; é a materialização da sua
+              identidade virtual.
+            </p>
+            <p class="text-light"> É o seu cartão de visita no mundo online, permitindo apresentar suas habilidades,
+              experiências e projetos de forma profissional e personalizada. Além disso, um site é uma ferramenta para
+              controlar sua narrativa online, expandir sua rede de contatos globalmente, exibir seu portfólio para um
+              público mais amplo e, acima de tudo, é uma oportunidade contínua de aprendizado e desenvolvimento pessoal.
+            </p>
+            <p class="text-light"> Investir em um site não é apenas sobre estar online, é sobre destacar sua marca
+              pessoal, explorar novas oportunidades e construir uma presença forte e relevante na era digital em
+              constante evolução
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="planos" class="p-5 container ">
+    <div class="container">
+      <h1 class="text-white shadow-lg">Nossos Planos</h1>
+
+      <div class="row">
+
+
+        <div class="card border-primary   bg-black text-white " style="width: 20rem;">
+
+          <div class="card-body text-center">
+            <i class="bi bi-bar-chart-line text-primary" style="font-size: 3rem;"></i>
+            <h5 class="card-title">Plano Inicial - Presença Online Básica</h5>
+
+            <br>
+            <p class="text-primary border border-primary  " style="border-radius: 10px;"> R$600,00</p>
+
+          </div>
+        </div>
+
+
+        <div class="card border-primary text-md-start bg-black text-white " style="width: 20rem;">
+
+          <div class="card-body text-center ">
+            <i class="bi bi-bank2 text-primary" style="font-size: 3rem;"></i>
+            <h5 class="card-title">Plano Empresarial - Expansão Profissional</h5>
+            <br>
+
+            <p class="text-primary border border-primary  " style="border-radius: 10px;"> R$1.000</p>
+
+          </div>
+        </div>
+
+        <div class="card bg-black border-primary text-white " style="width: 20rem;">
+
+          <div class="card-body text-center">
+            <i class="bi bi-shop text-primary" style="font-size: 3rem;"></i>
+            <h5 class="card-title">Plano E-commerce - Loja Virtual Simples</h5>
+            <br>
+
+            <p class="text-primary border border-primary  " style="border-radius: 10px;"> Preço a Combinar </p>
+
+          </div>
+        </div>
+
+      </div>
+
+
+      <br>
+      <div class="card container text-center bg-black border-primary">
+        <div class="card-header">
+          <ul class="nav nav-pills card-header-pills">
+
+
+          </ul>
+        </div>
+        <div class="card-body">
+          <h3 class="card-title text-primary">Aproveite as Ofertas!</h3>
+
+          <p class="card-text text-white">With supporting text below as a natural lead-in to additional content.</p>
+          <a href="#" class="btn btn-primary">Fazer o Orçamento</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="faq" class="p-5 container">
+    <div class="contai">
+      <h1 class="text-white">Perguntas Frequentes</h1>
+      <div class="accordion accordion-flush bg-black" id="accordionFlushExample">
+        <div class="accordion-item ">
+          <h2 class="accordion-header ">
+            <button class="accordion-button collapsed bg-black border-primary text-white" type="button"
+              data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false"
+              aria-controls="flush-collapseOne">
+              Como um site pode melhorar a visibilidade e o alcance do seu negócio?
+            </button>
+          </h2>
+          <div id="flush-collapseOne" class="accordion-collapse collapse bg-black border-primary text-white"
+            data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">
+              <p>
+                Primeiramente, um site otimizado é fundamental. Desenvolvemos sites responsivos, totalmente adaptáveis a
+                dispositivos móveis e com um design atraente, o que facilita a navegação e cria uma experiência incrível
+                para os visitantes.
+              </p>
+              Além disso, utilizamos técnicas avançadas de SEO (Otimização para Mecanismos de Busca) para garantir que
+              seu site apareça nos resultados de pesquisa do Google e outros mecanismos. Isso significa a escolha
+              criteriosa de palavras-chave, otimização de conteúdo e estrutura técnica que facilita a indexação pelos
+              motores de busca.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed bg-black border-primary text-white" type="button"
+              data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false"
+              aria-controls="flush-collapseTwo">
+              Como um site pode melhorar a experiência do cliente e a conveniência?
+            </button>
+          </h2>
+          <div id="flush-collapseTwo" class="accordion-collapse collapse bg-black border-primary text-white"
+            data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">
+              <p>Nosso foco é criar uma experiência de navegação intuitiva e agradável. Desenvolvemos sites com designs
+                atraentes e layouts que facilitam a localização rápida de informações, garantindo que os visitantes
+                encontrem o que procuram sem esforço.
+              </p>
+              Além disso, nossa especialidade está em criar sites totalmente responsivos, garantindo que a experiência
+              seja consistente em todos os dispositivos. Isso significa que seu site será acessível e terá um desempenho
+              excelente em computadores, tablets e smartphones.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed bg-black border-primary text-white" type="button"
+              data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false"
+              aria-controls="flush-collapseThree">
+              Quanto tempo demora pro meu site estar no ar?
+            </button>
+          </h2>
+          <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body bg-black text-white">
+              <p>Como vendedor de soluções de site, entendemos a importância de lançar seu site o mais rápido possível
+                para aproveitar as oportunidades de negócio. Normalmente, o tempo para ter seu site no ar pode variar de
+                acordo com a complexidade e escopo do projeto.
+              </p>
+              Mas é possivel que seu site esteja pronto em menos de três semanas!
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!--Seção de Rodapé-->
+  <footer class="bg-black text-light py-4 p-5" style=" box-shadow: 10px 20px 7px rgba(0, 0, 0, 0.2);">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <h4>Informações de Contato</h4>
+
+          <p>Email: exemplo@email.com</p>
+          <p>Telefone: (123) 456-7890</p>
+        </div>
+        <div class="col-md-4">
+          <h4>Links Rápidos</h4>
+          <ul class="list-unstyled">
+            <li><a href="index.html">Página Inicial</a></li>
+            <li><a href="#quemsomos">Sobre Nós</a></li>
+            <li><a href="#">Serviços</a></li>
+            <li><a href="#">Contato</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h4>Redes Sociais</h4>
+          <a href="https://www.instagram.com/devsync.tech/" class="btn btn-outline-primary btn-social ">
+            <i class="bi bi-instagram"></i>
+          </a>
+          <a href="#" class="btn btn-outline-primary btn-social">
+            <i class="bi bi-facebook"></i>
+          </a>
+          <a href="#" class="btn btn-outline-primary btn-social">
+            <i class="bi bi-whatsapp"></i>
+          </a>
+
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <footer class="text-center">
+    <hr>
+    <p class="text-white">Todos os direitos reservados &copy; 2023 Devsync.</p>
+  </footer>
+  <!--Linkagem com Javascript-->
+  <script src="/static/script/script.js"></script>
+
+  <!--Link do JS do Bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
